@@ -11,6 +11,7 @@ Welcome to Rayleigh's documentation!
    :caption: Contents:
 
    stream
+   qcodes
 
 
 Indices and tables
