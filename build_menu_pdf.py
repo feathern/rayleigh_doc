@@ -50,7 +50,15 @@ def parse_qcode_line(codeline):
         #tex_code=tmp[1]
         tmp2=tmp[1].split('$')
         #tmp2 = tmp.split('\n')
-        tex_code='$'+tmp2[1]+'$'
+        #tex_code='$'+tmp2[1]+'$'
+        while (tmp2[1][0]==' '):  # we need to trim whitespace for mathjax
+            #print('adjusting q: ', qcode+offset)
+            tmp2[1] = tmp2[1][1:]
+
+        nt = len(tmp2[1])  # and trim trailing whitespace
+        while (tmp2[1][nt-1] == ' '):
+            tmp2[1] = tmp2[1][0:nt-1]
+            nt = len(tmp2[1])
         tex_code=":math:`"+tmp2[1]+"`"
     return (varname, quantity_code,tex_code)
 
@@ -165,11 +173,13 @@ for iii, inpref in enumerate(inprefs):
             vname = pieces[0]
             qcode = pieces[1]
             tcode = pieces[2]
+
+
             qstr=str(qcode+offset)
             tlen = len(tcode)
             vlen = len(vname)
             qlen = len(qstr)
-            print('qlen: ', qlen)
+            #print('qlen: ', qlen)
             if (tlen > tlenmx):
                 tlenmx = tlen
             if (vlen > vlenmx):
@@ -191,16 +201,16 @@ for iii, inpref in enumerate(inprefs):
             mydict[vname]=mydict[relvname]+roffset
             offset=mydict[vname]
 
-    print('check: ', qlenmx,vlenmx,tlenmx)
+    #print('check: ', qlenmx,vlenmx,tlenmx)
     qunder = "="*(qlenmx+2)
-    print(qunder,qlenmx)
+    #print(qunder,qlenmx)
     vunder = "="*(vlenmx+2)
     #print(vunder)
     tunder = "="*(tlenmx+2)
     #print(tunder)
 
     headerline = tunder+' '+qunder+' '+vunder+' '
-    print(headerline)
+    #print(headerline)
     for ecvi, ecv in enumerate(loc_echecks):
         if (ecv > 1):
             print("Error in ", infile, ' qcode duplicated: ', ecvi) 
@@ -212,7 +222,7 @@ for iii, inpref in enumerate(inprefs):
     nrows = 0
     ncol=inpref[1]
     maxsets=inpref[1]
-    print('ncol = ', ncol)
+    #print('ncol = ', ncol)
     absmaxrows=20
     nvars = len(varnames)
     maxrows=nvars//ncol
@@ -245,7 +255,7 @@ for iii, inpref in enumerate(inprefs):
 
         outline = ' '+texcodes[i]+texp+'   '+ qstr +qexp+'   ' + vname
         outlines.append(outline+'\n')
-        print(outline)
+        #print(outline)
 
     for outline in outlines:
         myfile.write(outline)

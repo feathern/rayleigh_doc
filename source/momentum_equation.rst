@@ -38,15 +38,15 @@ Momentum Equation
  :math:`c_5\left[\boldsymbol{\nabla}\cdot\overline{\boldsymbol{\mathcal{D}}}\right]_r`                                           1234    viscous\_mForce\_r      
  :math:`c_5\left[\boldsymbol{\nabla}\cdot\overline{\boldsymbol{\mathcal{D}}}\right]_\theta`                                      1235    viscous\_mForce\_theta  
  :math:`c_5\left[\boldsymbol{\nabla}\cdot\overline{\boldsymbol{\mathcal{D}}}\right]_\phi`                                        1236    viscous\_mForce\_phi    
- :math:` -c_3\mathrm{f}_1\frac{\partial}{\partial r}\left(\frac{P}{\mathrm{f}_1} \right)`                                        1237    pressure\_Force\_r       
- :math:` -c_3\frac{1}{r}\frac{\partial P}{\partial \theta}`                                                                      1238    pressure\_Force\_theta   
- :math:` -c_3\frac{1}{r\mathrm{sin}\theta}\frac{\partial P}{\partial \phi}`                                                      1239    pressure\_Force\_phi     
- :math:` -c_3\mathrm{f}_1\frac{\partial}{\partial r}\left(\frac{P'}{\mathrm{f}_1} \right)`                                       1240    pressure\_pForce\_r      
- :math:` -c_3\frac{1}{r}\frac{\partial P'}{\partial \theta}`                                                                     1241    pressure\_pForce\_theta  
- :math:` -c_3\frac{1}{r\mathrm{sin}\theta}\frac{\partial P'}{\partial \phi}`                                                     1242    pressure\_pForce\_phi    
- :math:` -c_3\mathrm{f}_1\frac{\partial}{\partial r}\left(\frac{\overline{P}}{\mathrm{f}_1} \right)`                             1243    pressure\_mForce\_r      
- :math:` -c_3\frac{1}{r}\frac{\partial \overline{P}}{\partial \theta}`                                                           1244    pressure\_mForce\_theta  
- :math:` -c_3\frac{1}{r\mathrm{sin}\theta}\frac{\partial \overline{P}}{\partial \phi}`                                           1245    pressure\_mForce\_phi    
+ :math:`-c_3\mathrm{f}_1\frac{\partial}{\partial r}\left(\frac{P}{\mathrm{f}_1} \right)`                                         1237    pressure\_Force\_r       
+ :math:`-c_3\frac{1}{r}\frac{\partial P}{\partial \theta}`                                                                       1238    pressure\_Force\_theta   
+ :math:`-c_3\frac{1}{r\mathrm{sin}\theta}\frac{\partial P}{\partial \phi}`                                                       1239    pressure\_Force\_phi     
+ :math:`-c_3\mathrm{f}_1\frac{\partial}{\partial r}\left(\frac{P'}{\mathrm{f}_1} \right)`                                        1240    pressure\_pForce\_r      
+ :math:`-c_3\frac{1}{r}\frac{\partial P'}{\partial \theta}`                                                                      1241    pressure\_pForce\_theta  
+ :math:`-c_3\frac{1}{r\mathrm{sin}\theta}\frac{\partial P'}{\partial \phi}`                                                      1242    pressure\_pForce\_phi    
+ :math:`-c_3\mathrm{f}_1\frac{\partial}{\partial r}\left(\frac{\overline{P}}{\mathrm{f}_1} \right)`                              1243    pressure\_mForce\_r      
+ :math:`-c_3\frac{1}{r}\frac{\partial \overline{P}}{\partial \theta}`                                                            1244    pressure\_mForce\_theta  
+ :math:`-c_3\frac{1}{r\mathrm{sin}\theta}\frac{\partial \overline{P}}{\partial \phi}`                                            1245    pressure\_mForce\_phi    
  :math:`c_2\mathrm{f}_2\Theta_{00}`                                                                                              1246    buoyancy\_force\_ell0 
  :math:`-c_3\mathrm{f}_1\frac{\partial}{\partial r}\left(\frac{P_{00}}{\mathrm{f}_1} \right)`                                    1247    pressure\_force\_ell0\_r 
  :math:`c_4\left[\left(\boldsymbol{\nabla}\times\boldsymbol{B}\right)\times\boldsymbol{B}\right]_r`                              1248    j\_cross\_b\_r       
