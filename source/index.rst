@@ -12,6 +12,7 @@ Welcome to Rayleigh's documentation!
 
    stream
    qcodes
+   vids
 
 
 Indices and tables
