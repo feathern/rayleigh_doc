@@ -20,4 +20,6 @@ Quantity Codes
    amom_equation
    ke_equation
    me_equation
+   turbKE
+   axial_field
    
